@@ -1,0 +1,108 @@
+body{
+    padding-top: 110px;
+    background-color: black;
+    margin: 0;
+}
+.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 110px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-style: roboto,arial;
+    font-size:90px;
+    font-weight: bold;
+    border-bottom-width: 1px ;
+    border-bottom-style: solid;
+    border-block-color: rgb(228, 228, 228);
+    z-index: 100;
+}
+.gallery{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+.image-row{
+    
+    height: 300px;
+    
+}
+.image{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.image-row,
+.image{
+    border: 2px solid rgb(31, 22, 22);
+    border-radius: 13px;
+    box-shadow: 4px 7px 7px rgb(5, 4, 4);
+    cursor: pointer;
+    margin: 10px;
+    transition: 400ms;
+}
+.image-row,
+.image:hover{
+    
+    transform: scale(1.03);
+
+
+}
+
+
+.modal {
+ display: none; /* Hidden by default */
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+margin: auto;
+display: block;
+max-width: 90%;
+max-height: 90%;
+}
+
+#close {
+position: absolute;
+top: 20px;
+right: 35px;
+color: #fff;
+font-size: 40px;
+font-weight: bold;
+transition: 0.3s;
+cursor: pointer;
+}
+
+#close:hover {
+color: #bbb;
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    transition: transform 0.3s ease; /* Smooth transition for zoom */
+    cursor: zoom-in; /* Change cursor to indicate zoom */
+}
+
+/* Zoomed-in state */
+.modal-content.zoomed {
+    cursor: zoom-out;
+    transform: scale(2); /* Adjust the scale to control the zoom level */
+}
